@@ -1,6 +1,6 @@
-# Sample Completed Test Plan
+# SAMPLE FICTIONAL: Completed Test Plan
 
-This is a fictional example using a generic AI GPU server. It is not evidence of production validation on a real enterprise system.
+This is a fictional example using a generic AI GPU server. It is not evidence of production validation on a real enterprise system, H200/B200 hardware, direct liquid cooling, immersion cooling, rack-scale deployment, or customer environment.
 
 ## System Under Test
 
@@ -11,6 +11,9 @@ This is a fictional example using a generic AI GPU server. It is not evidence of
 | Server model | Generic 4U AI GPU server |
 | CPU | 2 x generic server CPUs |
 | GPU | 2 x generic NVIDIA data center GPUs |
+| GPU PCIe bus IDs | SAMPLE: 0000:41:00.0, 0000:81:00.0 |
+| GPU ECC/MIG state | SAMPLE: ECC enabled, MIG not configured |
+| GPU topology | SAMPLE: topology captured; no production fabric claim |
 | Memory | 512 GB DDR5 |
 | Storage | 2 TB NVMe boot, 8 TB NVMe data |
 | NIC/networking | 2 x 100 GbE adapters |
@@ -68,5 +71,4 @@ Excluded:
 
 ## Final Recommendation
 
-Ready as a validation planning artifact. Not ready as a production deployment validation report because no real enterprise GPU server was tested.
-
+Ready as a validation planning artifact. Not ready as a production deployment validation report because no real enterprise GPU server was tested and no real telemetry evidence exists.

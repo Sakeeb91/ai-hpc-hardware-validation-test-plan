@@ -1,6 +1,6 @@
-# Sample Completed Issue Report
+# SAMPLE FICTIONAL: Completed Issue Report
 
-This is a fictional example issue report.
+This is a fictional example issue report. It is not evidence from a real customer system.
 
 | Field | Value |
 |---|---|
@@ -9,8 +9,10 @@ This is a fictional example issue report.
 | System under test | LAB-SAMPLE-001 |
 | Date/time | 2026-06-25 14:30 local |
 | Reporter | Portfolio project owner |
+| Owner | Software stack owner |
 | Test phase | Software stack validation |
 | Suspected failure domain | CUDA/framework |
+| Related matrix row | COMPAT-008 |
 
 ## Summary
 
@@ -59,4 +61,3 @@ Review the driver/CUDA/PyTorch compatibility matrix, reinstall the correct PyTor
 
 - `evidence/nvidia_smi.txt`
 - `evidence/pytorch_cuda_check.txt`
-

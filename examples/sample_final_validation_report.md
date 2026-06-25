@@ -1,6 +1,6 @@
-# Sample Final Validation Report
+# SAMPLE FICTIONAL: Final Validation Report
 
-This is a fictional example report. It is not evidence of production validation on real enterprise hardware.
+This is a fictional example report. It is not evidence of production validation on real enterprise hardware, H200/B200 hardware, direct liquid cooling, immersion cooling, rack-scale deployment, or a customer environment.
 
 ## Executive Summary
 
@@ -49,9 +49,9 @@ The compatibility plan covers OS/kernel, driver, CUDA, PyTorch, TensorFlow, cont
 
 ## Issues Found
 
-| Issue | Severity | Domain | Status | Recommendation |
-|---|---|---|---|---|
-| Optional topology telemetry unavailable | S4 Low | Hardware detection | Open | Repeat on target hardware with approved topology tooling. |
+| Issue | Severity | Domain | Status | Owner | Recommendation |
+|---|---|---|---|---|---|
+| Optional topology telemetry unavailable | S4 Low | Hardware detection | Open | Test owner | Repeat on target hardware with approved topology tooling. |
 
 ## Risk Assessment
 
@@ -66,4 +66,3 @@ Overall risk is medium for a portfolio planning artifact and unknown for product
 - No real H200/B200 system was tested.
 - No direct liquid cooling or immersion cooling validation was performed.
 - No production data center deployment was validated.
-

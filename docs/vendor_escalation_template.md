@@ -2,7 +2,18 @@
 
 ## Short Summary
 
-Provide a concise description of the issue, impact, and requested support.
+Provide a concise description of the issue, business/validation impact, and requested support.
+
+## Case Metadata
+
+| Field | Value |
+|---|---|
+| Internal issue ID | |
+| Vendor/OEM case ID | |
+| Severity/urgency | |
+| Date opened | |
+| Requested response date | |
+| Contact | |
 
 ## System Details
 
@@ -10,19 +21,22 @@ Provide a concise description of the issue, impact, and requested support.
 |---|---|
 | System model | |
 | Serial number | |
+| Asset tag | |
 | Customer/site | |
 | Test owner | |
-| Date opened | |
+| Physical location | |
 
 ## Hardware Configuration
 
 - CPU:
 - GPU:
+- GPU bus IDs:
 - Memory:
 - Storage:
 - NIC:
 - Power supply:
 - Cooling:
+- Relevant topology:
 
 ## Software Versions
 
@@ -30,15 +44,18 @@ Provide a concise description of the issue, impact, and requested support.
 - Kernel:
 - NVIDIA driver:
 - CUDA:
+- cuDNN/NCCL:
 - PyTorch/TensorFlow:
 - Container runtime:
+- Monitoring tools:
 
 ## Firmware Versions
 
 - BIOS:
 - BMC:
-- GPU firmware:
+- GPU firmware/VBIOS:
 - NIC firmware:
+- Storage controller firmware:
 
 ## Reproduction Steps
 
@@ -51,12 +68,13 @@ Provide a concise description of the issue, impact, and requested support.
 - Command output:
 - Logs:
 - Telemetry:
+- Topology output:
 - Screenshots:
 - Issue report:
 
 ## Impact
 
-Describe deployment, customer, schedule, performance, or safety impact.
+Describe deployment, customer, schedule, performance, safety, or validation impact.
 
 ## What Has Already Been Tried
 
@@ -64,17 +82,15 @@ Describe deployment, customer, schedule, performance, or safety impact.
 
 ## Requested Support
 
-State the specific support requested from the vendor or OEM.
+State the specific support requested from the vendor or OEM, such as firmware guidance, compatibility confirmation, known-issue review, RMA guidance, or debug procedure.
 
-## Urgency
+## Attachments Checklist
 
-- Severity:
-- Required response date:
-- Reason:
-
-## Contact Information
-
-- Name:
-- Email:
-- Phone:
+- System-under-test record
+- Hardware inventory
+- Software inventory
+- Logs
+- Telemetry
+- Reproduction output
+- Photos/screenshots if appropriate and permitted
 

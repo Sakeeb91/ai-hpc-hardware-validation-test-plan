@@ -136,8 +136,14 @@ def unresolved_items_section(matrices: list[dict[str, Any]]) -> str:
                     or row.get("Requirement")
                     or ""
                 )
+                severity = row.get("Severity", "UNSPECIFIED") or "UNSPECIFIED"
+                owner = row.get("Owner", "UNASSIGNED") or "UNASSIGNED"
+                issue_link = row.get("Issue/Risk Link", "") or "no issue/risk link"
                 notes = row.get("Notes", "")
-                lines.append(f"- `{identifier}` {name}: {status}. {notes}".rstrip())
+                lines.append(
+                    f"- `{identifier}` {name}: {status}; severity {severity}; owner {owner}; "
+                    f"link {issue_link}. {notes}".rstrip()
+                )
     return "\n".join(lines) if lines else "No unresolved failures, blocked tests, or warning results were found in supplied matrices."
 
 
@@ -220,4 +226,3 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-

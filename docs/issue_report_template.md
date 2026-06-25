@@ -2,13 +2,17 @@
 
 | Field | Value |
 |---|---|
+| Issue ID | |
 | Issue title | |
 | Severity | |
+| Status | |
 | System under test | |
-| Date/time | |
+| Date/time first observed | |
 | Reporter | |
+| Owner | |
 | Test phase | |
 | Suspected failure domain | |
+| Related matrix row | |
 
 ## Summary
 
@@ -16,11 +20,20 @@ Describe the issue in one or two precise paragraphs.
 
 ## Expected Behavior
 
-State what should have happened.
+State what should have happened and cite the relevant pass criteria.
 
 ## Actual Behavior
 
-State what happened, including error messages and observed impact.
+State what happened, including error messages, telemetry changes, and observed impact.
+
+## Environment
+
+- Server/system ID:
+- OS/kernel:
+- NVIDIA driver:
+- CUDA:
+- Framework/container:
+- Firmware/BIOS/BMC:
 
 ## Steps To Reproduce
 
@@ -39,14 +52,22 @@ State what happened, including error messages and observed impact.
 - Evidence file:
 - Relevant log lines:
 - Telemetry window:
+- Screenshot or console capture, if appropriate:
 
-## Business/Customer Impact
+## Impact
 
-Describe whether this blocks validation, delays deployment, reduces performance confidence, or requires vendor support.
+Describe whether this blocks validation, delays deployment, reduces performance confidence, affects customer readiness, or requires vendor support.
 
 ## Workaround
 
 Document any known workaround or state that none is known.
+
+## Triage Notes
+
+- What has already been tried:
+- Reproduction frequency:
+- Suspected root cause:
+- Remaining unknowns:
 
 ## Recommended Next Action
 

@@ -2,19 +2,27 @@
 
 ## Purpose
 
-Thermal validation observes whether the server can maintain stable temperatures, power behavior, and clocks during idle, load, and sustained-load conditions.
+Thermal validation observes whether the server can maintain stable temperatures, power behavior, and clocks during idle, load, and sustained-load conditions. It is not a substitute for vendor qualification or facility-level thermal design.
 
 ## Why Thermal Behavior Matters
 
 AI/HPC workloads can hold GPUs at high utilization for long periods. Insufficient cooling can cause throttling, reduced performance, instability, component stress, or shutdown. Thermal evidence is required before interpreting benchmark results as representative.
 
+## Preconditions
+
+- Approved workload and duration.
+- Known telemetry source: GPU, BMC, DCGM, vendor tool, or site monitoring.
+- Known threshold source: vendor documentation, OEM platform guidance, lab procedure, or explicitly documented placeholder.
+- Ambient or inlet temperature source if available.
+- Stop conditions and escalation owner.
+
 ## Idle Baseline
 
-Record idle GPU temperature, fan/cooling state, power draw, and clocks after the system has been stable with no intentional GPU workload.
+Record idle GPU temperature, fan/cooling state, power draw, clocks, and ambient/inlet temperature if available after the system has been stable with no intentional GPU workload.
 
 ## Load Behavior
 
-During benchmark or stress workloads, record temperature, power draw, clocks, utilization, and any throttle indicators at a fixed interval.
+During benchmark or stress workloads, record temperature, power draw, clocks, utilization, throttle indicators, and BMC/vendor alerts at a fixed interval.
 
 ## Sustained Load Behavior
 
@@ -30,24 +38,24 @@ Record GPU power draw and compare it with expected power limits. Watch for repea
 
 ## Clock Behavior
 
-Record graphics, memory, and SM clocks where available. Sustained clock reduction may indicate power, thermal, or workload constraints.
+Record graphics, SM, memory, and application clocks where available. Sustained clock reduction may indicate power, thermal, firmware, or workload constraints.
 
 ## Thermal Throttling
 
-Capture any throttling indicators from NVIDIA tools, logs, or vendor telemetry. A benchmark that completes while throttled should not be treated as a clean pass without explanation.
+Capture any throttling indicators from NVIDIA tools, DCGM, logs, or vendor telemetry. A benchmark that completes while throttled should not be treated as a clean pass without explanation.
 
-## Cooling Concepts
+## Cooling Method Considerations
 
-- Air-cooled systems rely on chassis airflow, fans, room temperature, and rack airflow design.
-- Direct liquid cooling systems transfer heat through cold plates and facility or rack-level liquid loops.
-- Immersion-ready systems require a validated fluid, tank, service procedure, and compatible components.
+- Air-cooled systems depend on chassis airflow, fan health, rack airflow, room conditions, inlet temperature, and dust/obstruction state.
+- Direct liquid cooling systems depend on vendor procedure, cold-plate contact, coolant flow, coolant temperature, pressure/leak monitoring, service state, and facility water loop conditions.
+- Immersion-ready systems depend on component compatibility, fluid specification, tank design, service process, monitoring, and site approval.
 
-This project describes those concepts only. It does not claim direct liquid cooling or immersion validation experience.
+This project describes these considerations at a planning level only. It does not claim direct liquid cooling or immersion validation experience.
 
 ## Thermal Classification
 
-- `PASS`: Stable within expected limits.
-- `WARNING`: High but stable, with reduced cooling margin.
-- `FAIL`: Uncontrolled rise, repeated throttling, shutdown, or thermal errors.
-- `BLOCKED`: Required telemetry is unavailable.
+- `PASS`: Stable within expected limits with evidence and no thermal errors.
+- `WARNING`: High but stable, reduced cooling margin, missing optional ambient/inlet data, or minor throttle observation that does not violate required criteria.
+- `FAIL`: Uncontrolled rise, repeated throttling, shutdown, thermal alert, or thermal error.
+- `BLOCKED`: Required telemetry, thresholds, approval, or safety procedure is unavailable.
 
