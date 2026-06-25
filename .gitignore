@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+
+# Local evidence and generated validation outputs
+evidence/
+reports/
+artifacts/
+*.log
+
+# Keep CV/application material local only.
+cv/
+
