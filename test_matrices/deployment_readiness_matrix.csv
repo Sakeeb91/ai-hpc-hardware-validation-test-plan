@@ -1,0 +1,16 @@
+Checklist ID,Area,Requirement,Evidence Required,Owner,Status,Notes
+READY-001,Hardware inventory,Hardware inventory complete,Completed hardware inventory template,Test owner,NOT RUN,
+READY-002,Software stack,Software stack recorded,Completed software stack template,Test owner,NOT RUN,
+READY-003,GPU detection,GPUs detected,nvidia-smi and lspci output,Test owner,NOT RUN,
+READY-004,Driver/CUDA,Driver and CUDA verified,Version commands and compatibility notes,Test owner,NOT RUN,
+READY-005,AI framework,Framework GPU access verified,PyTorch/TensorFlow GPU check output,Test owner,NOT RUN,
+READY-006,Benchmark,Benchmark completed,Benchmark results and telemetry,Test owner,NOT RUN,
+READY-007,Stress test,Stress test completed,Stress matrix and logs,Test owner,NOT RUN,
+READY-008,Thermal/power,Thermal and power observations recorded,Thermal telemetry CSV,Test owner,NOT RUN,
+READY-009,Storage,Storage health checked,lsblk/df and health check evidence,Test owner,NOT RUN,
+READY-010,Networking,Network interfaces checked,ip link/ethtool evidence,Test owner,NOT RUN,
+READY-011,Logs,Logs reviewed,journalctl/dmesg summary,Test owner,NOT RUN,
+READY-012,Issues,Issues documented,Issue reports,Test owner,NOT RUN,
+READY-013,Risk,Risk level assigned,Risk register,Test owner,NOT RUN,
+READY-014,Recommendation,Final recommendation written,Final validation report,Test owner,NOT RUN,
+

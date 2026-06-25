@@ -1,0 +1,14 @@
+Test ID,Component,Expected Version/Config,Observed Version/Config,Validation Command,Pass Criteria,Status,Notes
+COMPAT-001,GPU model/count,,,nvidia-smi -L,"Expected GPUs are visible with expected count",NOT RUN,
+COMPAT-002,PCIe GPU visibility,,,lspci | grep -i nvidia,"GPU devices are visible on PCIe bus",NOT RUN,
+COMPAT-003,OS/kernel,,,uname -r && cat /etc/os-release,"OS and kernel match expected validation baseline",NOT RUN,
+COMPAT-004,NVIDIA driver,,,nvidia-smi,"Driver loads and reports GPU status",NOT RUN,
+COMPAT-005,CUDA runtime,,,nvcc --version or framework CUDA query,"CUDA runtime is available or documented as not installed",NOT RUN,
+COMPAT-006,PyTorch GPU access,,,python3 -c ""import torch; print(torch.cuda.is_available())"","PyTorch reports GPU access where PyTorch is in scope",NOT RUN,
+COMPAT-007,TensorFlow GPU access,,,python3 -c ""import tensorflow as tf; print(tf.config.list_physical_devices('GPU'))"","TensorFlow reports GPU access where TensorFlow is in scope",NOT RUN,
+COMPAT-008,Docker,,,docker --version,"Docker is installed where container validation is in scope",NOT RUN,
+COMPAT-009,NVIDIA Container Toolkit,,,nvidia-container-cli --version,"GPU containers can access NVIDIA runtime where in scope",NOT RUN,
+COMPAT-010,Storage capacity,,,df -h,"Sufficient storage is available for benchmark outputs",NOT RUN,
+COMPAT-011,Network interfaces,,,ip link,"Expected network interfaces are present",NOT RUN,
+COMPAT-012,BIOS/BMC firmware,,,dmidecode -t bios or vendor tool,"Firmware versions are recorded and reviewed",NOT RUN,
+
